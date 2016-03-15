@@ -16,7 +16,7 @@ app.get("/profile", function(req, res){
     var habiidades=["habilidad1","habilidad2","habilidad3"]
     
     
-   res.render("index",{nombreUsuario:nombreUsuario,
+   res.render("profile",{nombreUsuario:nombreUsuario,
                         fechaNacimiento:fechaNacimiento,
                         curp:curp,
                         RFC:RFC,
