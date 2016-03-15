@@ -1,15 +1,28 @@
 var express = require("express");
 var app = express();
 var bodyParser=require("body-parser");
-var log4js=require("log4js");
 
 
 app.use(bodyParser.json());// Application/JSON
 app.use(bodyParser.urlencoded({extends:true}));
 app.set("view engine","jade");
 
-app.get("/", function(req, res){
-   res.render("index"); 
+app.get("/profile", function(req, res){
+    var nombreUsuario="Hector Galvan";
+    var fechaNacimiento="15/09/1992";
+    var curp="";
+    var RFC="";
+    var domicilio="";
+    var habiidades=["habilidad1","habilidad2","habilidad3"]
+    
+    
+   res.render("index",{nombreUsuario:nombreUsuario,
+                        fechaNacimiento:fechaNacimiento,
+                        curp:curp,
+                        RFC:RFC,
+                        domicilio:domicilio,
+                        habilidades:habiidades
+   }); 
 });
 //comentario
 
